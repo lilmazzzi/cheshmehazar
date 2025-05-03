@@ -1,0 +1,26 @@
+<script>
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+  
+      const username = document.getElementById("username").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+  
+      if (username && email && password) {
+        // نمایش پیام موفقیت
+        const msg = document.getElementById("successMessage");
+        msg.style.display = "block";
+        msg.textContent = "ثبت‌نام با موفقیت انجام شد! در حال انتقال...";
+  
+        // پاک کردن فرم
+        this.reset();
+  
+        // انتقال به login.html پس از ۲ ثانیه
+        setTimeout(() => {
+          window.location.href = "login.html";
+        }, 2000);
+      } else {
+        alert("لطفاً تمام فیلدها را پر کنید.");
+      }
+    });
+  </script>  

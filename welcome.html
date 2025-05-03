@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>خوش آمدید</title>
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: #e3f2fd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 300px;
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #333;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #c82333;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2 id="welcomeText"></h2>
+    <p>شما وارد سیستم شدید.</p>
+    <button onclick="logout()">خروج از حساب</button>
+  </div>
+
+  <script>
+    const username = localStorage.getItem("username");
+
+    if (username) {
+      document.getElementById("welcomeText").innerText = `خوش آمدی ${username} عزیز`;
+    } else {
+      window.location.href = "register.html";
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "register.html";
+    }
+  </script>
+
+</body>
+</html>

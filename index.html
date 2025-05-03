@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>چشمه آذر - تصفیه آب</title>
+  <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v30.1.0/dist/font-face.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Vazir', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(to left, #1d19ff, #458cd8);
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      display: flex;
+      gap: 10px;
+      position: relative;
+      align-items: center;
+    }
+
+    nav a, .dropbtn {
+      text-decoration: none;
+      background-color: #458cd8;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      border: none;
+      font-family: 'Vazir', sans-serif;
+    }
+
+    nav a:hover, .dropbtn:hover {
+      background-color: #005fcc;
+    }
+
+    .dropbtn {
+      background-color: #007BFF;
+      padding: 13px 16px;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      background-color: #ffffff;
+      min-width: 160px;
+      box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      z-index: 1;
+      text-align: right;
+    }
+
+    .dropdown-content a {
+      background-color: #4580b7;
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      border-bottom: 1px solid #2f71af;
+    }
+
+    .dropdown-content a:last-child {
+      border-bottom: none;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #2f71af;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    .logo {
+      font-size: 28px;
+      color: #ffffff;
+      font-weight: bold;
+    }
+
+    main {
+      padding: 40px 20px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .main-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .main-text h1 {
+      color: #000000;
+      font-size: 32px;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    .main-text p {
+      font-size: 18px;
+      max-width: 600px;
+      margin: 20px auto;
+      animation: fadeIn 2s ease-in;
+    }
+
+    .main-image {
+      flex: 1;
+      min-width: 300px;
+      text-align: center;
+    }
+
+    .main-image img {
+      max-width: 100%;
+      border-radius: 16px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      background-color: #4580b7;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: white;
+    }
+
+    footer a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      nav a, .dropbtn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .logo {
+        align-self: center;
+        width: 100%;
+        text-align: center;
+      }
+
+      .dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        background-color: #277cba;
+      }
+
+      main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="signup.html"><i class="fas fa-user-plus"></i> ثبت‌نام</a>
+      <div class="dropdown">
+        <button class="dropbtn"><i class="fas fa-box-open"></i> محصولات</button>
+        <div class="dropdown-content">
+          <a href="#"><i class="fas fa-tint"></i> دستگاه تصفیه آب</a>
+          <a href="#"><i class="fas fa-filter"></i> فیلتر</a>
+          <a href="#"><i class="fas fa-cogs"></i> قطعات</a>
+        </div>
+      </div>
+      <a href="contact.html"><i class="fas fa-info-circle"></i> درباره ما</a>
+    </nav>
+    <div class="logo">چشمه آذر</div>
+  </header>
+
+  <main>
+    <div class="main-text">
+      <h1>به چشمه آذر خوش آمدید</h1>
+      <p>ما در چشمه آذر، با ارائه دستگاه‌های تصفیه آب پیشرفته و با کیفیت، به سلامت و آسایش خانواده شما اهمیت می‌دهیم. با ما همراه باشید تا آب پاک بنوشید.</p>
+    </div>
+    <div class="main-image">
+      <img src="images/water-purifier.jpg" alt="دستگاه تصفیه آب" />
+    </div>
+  </main>
+
+  <footer>
+    © 2025 چشمه آذر - تمامی حقوق محفوظ است. |
+    تماس با ما: <a href="tel:09193370610">09193370610</a>
+  </footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("success") === "true") {
+      alert("با موفقیت وارد شدید");
+    }
+  </script> 
+</body>
+</html>

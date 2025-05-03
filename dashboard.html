@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>داشبورد کاربر</title>
+  <style>
+    body {
+      font-family: 'Vazirmatn', sans-serif;
+      background: #f0f8ff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .dashboard-box {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-bottom: 15px;
+    }
+
+    p {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    button {
+      margin: 10px 5px;
+      padding: 10px 20px;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      width: 100%;
+    }
+
+    .logout-btn {
+      background-color: #dc3545;
+      color: white;
+    }
+
+    .logout-btn:hover {
+      background-color: #c82333;
+    }
+
+    .home-btn {
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .home-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* ریسپانسیو برای دستگاه‌های موبایل */
+    @media (max-width: 480px) {
+      .dashboard-box {
+        padding: 20px;
+        width: 90%;
+      }
+
+      button {
+        font-size: 14px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    /* ریسپانسیو برای تبلت‌ها */
+    @media (max-width: 768px) {
+      .dashboard-box {
+        padding: 25px;
+      }
+
+      button {
+        font-size: 15px;
+      }
+
+      h2 {
+        font-size: 22px;
+      }
+
+      p {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dashboard-box">
+    <h2 id="userGreeting">خوش آمدید</h2>
+    <p>شما وارد داشبورد شدید.</p>
+    <button class="home-btn" onclick="goToHome()">صفحه اصلی</button>
+    <button class="logout-btn" onclick="logout()">خروج از حساب</button>
+  </div>
+
+  <script>
+    const username = localStorage.getItem("username");
+
+    if (username) {
+      document.getElementById("userGreeting").innerText = `خوش آمدی ${username} عزیز`;
+    } else {
+      window.location.href = "register.html";
+    }
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "register.html";
+    }
+
+    function goToHome() {
+      window.location.href = "index.html";
+    }
+  </script>
+
+</body>
+</html>
